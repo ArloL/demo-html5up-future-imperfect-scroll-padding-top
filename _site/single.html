@@ -97,26 +97,226 @@
 
 						<!-- Post -->
 							<article class="post">
-								<header>
-									<div class="title">
-										<h2><a href="#">Magna sed adipiscing</a></h2>
-										<p>Lorem ipsum dolor amet nullam consequat etiam feugiat</p>
-									</div>
-									<div class="meta">
-										<time class="published" datetime="2015-11-01">November 1, 2015</time>
-										<a href="#" class="author"><span class="name">Jane Doe</span><img src="images/avatar.jpg" alt="" /></a>
-									</div>
-								</header>
-								<span class="image featured"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-								<p>Nunc quis dui scelerisque, scelerisque urna ut, dapibus orci. Sed vitae condimentum lectus, ut imperdiet quam. Maecenas in justo ut nulla aliquam sodales vel at ligula. Sed blandit diam odio, sed fringilla lectus molestie sit amet. Praesent eu tortor viverra lorem mattis pulvinar feugiat in turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce ullamcorper tellus sit amet mattis dignissim. Phasellus ut metus ligula. Curabitur nec leo turpis. Ut gravida purus quis erat pretium, sed pellentesque massa elementum. Fusce vestibulum porta augue, at mattis justo. Integer sed sapien fringilla, dapibus risus id, faucibus ante. Pellentesque mattis nunc sit amet tortor pellentesque, non placerat neque viverra. </p>
-								<footer>
-									<ul class="stats">
-										<li><a href="#">General</a></li>
-										<li><a href="#" class="icon solid fa-heart">28</a></li>
-										<li><a href="#" class="icon solid fa-comment">128</a></li>
-									</ul>
-								</footer>
+
+  <header>
+    <div class="title">
+
+            <h1><a href="https://ufried.com/blog/never_been_about_code/">It has never been about code</a></h1>
+
+
+
+            <p>AI asking fundamental questions</p>
+
+    </div>
+    <div class="meta">
+
+
+        <time class="published" datetime="2026-04-03">
+            April 3, 2026</time>
+        <span class="author">Uwe Friedrichsen</span>
+
+            <p>18 minute read</p>
+
+
+    </div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <a href="https://ufried.com/blog/never_been_about_code/" class="image featured">
+            <img src="https://ufried.com/blog/never_been_about_code/chocolate.jpg" alt="Chocolate plates">
+        </a>
+
+
+
+  <div id="content">
+    <h1 id="it-has-never-been-about-code">It has never been about code</h1>
+<h2 id="the-dream">The dream</h2>
+<p>It started many years ago with a dream – a dream about a universal automaton. Many people were involved in its invention: <a href="https://en.wikipedia.org/wiki/Ada_Lovelace">Ada Lovelace</a>, <a href="https://en.wikipedia.org/wiki/Charles_Babbage">Charles Babbage</a>, <a href="https://en.wikipedia.org/wiki/Alan_Turing">Alan Turing</a>, <a href="https://en.wikipedia.org/wiki/Konrad_Zuse">Conrad Zuse</a>, and many more. <a href="https://en.wikipedia.org/wiki/John_von_Neumann">John von Neumann</a> came relatively late to the party, but he described a hardware design in 1945 that became famous as the <a href="https://en.wikipedia.org/wiki/Von_Neumann_architecture">“Von Neumann architecture”</a>. Even if the technology evolved a lot and computers became much more powerful since 1945, more than 80 years later, the design of most modern computers is still a refined version of the original Von Neumann architecture.</p>
+<p>But this is not where the dream stopped. We now had this wonderful general-purpose automaton, a <em>computer</em> that was able to execute arbitrary tasks. As long as a task could be represented by a series of operations reading and manipulating data, a computer based on a Von Neumann architecture was able to execute it. New dreams emerged. Many, many ideas that people would love to let such a computer execute.</p>
+<h2 id="implementing-the-dream">Implementing the dream</h2>
+<p>The only problem was to make a computer execute an idea. This was a tedious task. While a computer was able to execute the task time and again once it had understood it, it was everything but easy to make a computer understand the task. In the beginning, it was necessary to translate the idea directly into digital machine code. Machine code was just a series of numbers, using numbering systems that most people were not used to like binary, octal or hexadecimal numbers. Writing machine code basically required to think like a computer.</p>
+<p>As it was very slow, tedious and error-prone work to translate an idea into machine code, assembler language was developed. Assembler language is an abstraction on top of machine code, replacing the series of numbers with mnemonics that are easier to read and grasp for a human. Assembler language usually additionally provided some extra convenience for its users, like using labels for subroutine calls or jump targets instead of memory addresses, which improved the understandability of the code even more – at least compared to raw machine code.</p>
+<p>Translating an idea into assembler language was still a tedious and comparatively slow task. In the end, assembler language was just a relatively small abstraction on top of machine code. While it made things better to grasp for the programmers, it still required thinking like a computer. This led to the invention of 3GL – 3rd Generation Languages like Fortran, ALGOL, COBOL or Lisp in the late 1950s. A 3GL was an abstraction that helped people to describe their intention in a way that was closer to humans.</p>
+<p>Instead of having to describe the solution in terms of machine instructions (or mnemonics for them), it was now possible to describe it in ways that were a lot easier to comprehend for a human. Instead of having to write something like</p>
+<pre><code>&lt;prepare condition check by doing some processing that enables the condition check&gt;
+&lt;check for condition, e.g., a test for something being zero&gt;
+&lt;execute a conditional jump to a given memory address in case the condition is met&gt;
+</code></pre>
+<p>it was now possible to write something like</p>
+<pre><code>if (x &gt; THRESHOLD) ...
+</code></pre>
+<p>Besides being more concise, it made understanding and reasoning about the code written much easier.</p>
+<p>Since then, we have seen a lot of attempts to build higher-level abstractions like, e.g., <a href="https://en.wikipedia.org/wiki/Fourth-generation_programming_language">4GL</a>, <a href="https://en.wikipedia.org/wiki/Model-driven_architecture">MDA</a>, <a href="https://en.wikipedia.org/wiki/Low-code_development_platform">Low-code development</a> and <a href="https://en.wikipedia.org/wiki/No-code_development_platform">no-code development</a>. However, none of them was ever able to replace 3GL as the predominant way of telling a Von Neumann machine what we wanted it to do for us. Thus, even if many new 3GL emerged since the late 1950s, offering refined concepts and advanced ways of expressing our intentions, 3GL still is it. By far the biggest share of computer programming still happens in 3GL.</p>
+<p>A whole industry evolved around programming in 3GL and what we need to do to turn our ideas into 3GL code. The whole concept of software engineering revolves around the question of how to turn ideas into 3GL code best. We have seen a lot of debate about all this, starting from capturing the ideas and not ending in how to present the idea in code best – plus everything accompanying it, including tooling, best practices and all that. Many competing ideas, many books, posts, trainings, case studies, and more. We all know it just too well because this is what we deal with every single day.</p>
+<p>Most of these discussions are good, and there certainly is value in finding better ways to turn ideas into code. However, if we take a step back, we realize that in software development we basically still do the same thing we already did roughly 70 years ago, just in a refined way. <sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup></p>
+<h2 id="ai-asking-questions">AI asking questions</h2>
+<p>Enter AI – here meaning AI agents leveraging LLMs to write software.</p>
+<p>The use of AI in software development, predominantly for writing code but also in many other activities that are needed to turn an idea into code, raised many discussions. I also still have many questions regarding the use of AI in software development, especially regarding its long-term effects, and wrote about some of my questions in prior blog posts.</p>
+<p>However, when I stepped back further, I realized that AI-based software development also asks us questions. The two most important questions I have understood so far over all the AI clamor by the proponents and opponents of AI are:</p>
+<ol>
+<li>Are there better ways to tell a Von Neumann machine what we want from it than writing 3GL code?</li>
+<li>Does it always need to be software?</li>
+</ol>
+<p>Let us look at those two fundamental questions one by one.</p>
+<h2 id="it-has-never-been-about-code-1">It has never been about code</h2>
+<p>The first question is about the way we tell a computer how to execute our ideas. Even if we refined many details over the years, basically we have been doing it in the same way for almost 70 years meanwhile. Sure, we created software engineering for scaling software production, we developed huge software development processes like, e.g., the <a href="https://en.wikipedia.org/wiki/V-model">V-model</a>, we moved on to agile software development (even if most companies failed to actually become agile – but that is a different story).</p>
+<p>Nevertheless, in the end we still take ideas, break them down in parts, refine the parts until they are in a form that we can write them down in a 3GL, and then translate the code written in a 3GL into an executable program using a compiler or a runtime interpreter. As our systems are usually too big to understand and run reliably without some overarching structure and guiding principles, we tend to create our code by adhering to some architectural guidelines. But this is basically it: Idea to 3GL. 3GL to executable program. Some guiding principles for ensuring desirable solution properties.</p>
+<p>The question AI raises is if this is the best way to get from idea to solution. From a builder’s perspective, who wants a computer to execute their ideas, <em>it has never been about code</em>. It was about making the computer execute the idea. The more straightforward, the better. Everything that stands between an idea and its execution is an impediment from a builder’s perspective. This also means that traditional software development was extremely annoying for a builder: so much effort, so many discussions, so much time, until the machine finally executes the idea. Sigh! <sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup></p>
+<p>If we look at software development from a builder’s perspective, AI raises the question if there are better ways to tell a computer what we want from it than breaking down ideas and massaging them until we can describe them in a 3GL and then translating them into executable machine code.</p>
+<p>Personally, I think this is a very interesting question. We did not find a better abstraction than 3GL with all its intricacies in 70 years to tell a computer what we want from it – at least not one that was able to oust 3GL way as predominant paradigm. Thus, the question is:</p>
+<blockquote>
+<p>Why didn’t we manage to move to a higher abstraction level in software development since the late 1950s?</p>
+</blockquote>
+<ul>
+<li>Limitations in hardware? I doubt it. At least for 30 years, the hardware has been powerful enough to support higher-level abstractions than 3GL.</li>
+<li>Too diverse demands that do not allow for a higher abstraction level? Maybe. Abstraction always requires reducing the degrees of freedom by bundling possible implementation variants at a lower level into a single predefined variant. Without taking away variants that are possible at the lower abstraction level, the higher-level abstraction would be as verbose and detailed as the lower-level abstraction, i.e., it would not be an abstraction but just a different naming. The less agreement exists about how to bundle possible implementation variants, the lower the possible abstraction level. In custom software development, business departments often insist on “their way”, in arbitrary details ranging from deviating business logic to the placement and behavior of UI elements. Such diverse demands may reduce the level of possible abstraction. Still, the question persists if and how the usage of AI would solve this issue (see my post <a href="https://ufried.com/blog/software_fallacies_2/">“Software - It’s not what you think it is - Part 2”</a> for a more detailed discussion of this issue).</li>
+<li>Lack of ideas? I doubt it. We have seen multiple approaches to raise the abstraction level over the years. However, none of them were able to oust 3GL as the predominant abstraction.</li>
+<li>3GL already being the perfect abstraction level? I doubt it. If it were, I doubt we would need so much work to translate ideas into something ready to be written in a 3GL.</li>
+<li>The Von Neumann architecture being an inferior concept in the first place? Maybe. But this would raise the question of why it has been so tremendously successful over the last decades – the degree of use still rising.</li>
+</ul>
+<p>Overall, it remains an intriguing question. I am not sure if agentic AI is the answer. There are so many unanswered questions yet. Even AI aficionados often only point towards expected “exponential improvements”, i.e., their belief in some future improvements that hopefully will answer all those questions. However, currently it is just that: a belief. Only the future will tell if agentic AI – or whatever will come after that – will be able to deliver a closed abstraction at a higher level. <sup id="fnref:3"><a href="#fn:3" class="footnote-ref" role="doc-noteref">3</a></sup></p>
+<h2 id="does-it-always-have-to-be-software">Does it always have to be software?</h2>
+<p>The second question leads in a different direction. AI also raises the question if it always needs to be software. In the end, software is a tool. We use tools to complete jobs. If the job is to add numbers, we may use our hands (as long as the numbers are small enough), objects like, e.g., stones of different sizes, an abacus, an electric calculator, an electronic calculator, software, and more. All those things are tools that help us to get our job “add numbers” done. <sup id="fnref:4"><a href="#fn:4" class="footnote-ref" role="doc-noteref">4</a></sup></p>
+<p>Depending on the job, its properties, and the given context, one tool may be suited better for the job than another. If the numbers are quite small, the fingers may be sufficient. If we lack electrical power, an abacus may be the best tool for adding bigger numbers. Software may be the best tool for adding arbitrarily large numbers. And so on. It is not that a given tool is always the best for a job. Each tool has its trade-offs.</p>
+<p>Also, software has its trade-offs. On the upside, we have:</p>
+<ul>
+<li>Software is extremely malleable, i.e., it can execute anything a Von Neumann machine can process – which is <em>a lot</em>. As I wrote in the beginning: A computer is a general-purpose automaton.</li>
+<li>It can execute its programs reliably and deterministically as often as we want. A program will always produce the same output when provided the same input and starting state.</li>
+<li>We can reliably predict what it does (even if it may require some effort to do so).</li>
+<li>We can even prove the correctness of a given program.</li>
+</ul>
+<p>All these are great properties. On the downside, we have:</p>
+<ul>
+<li>Software is bad at dealing with ambiguity as we experience it in human communication. You need to be very precise, or software will not understand what you want. Providing this precision can be very tedious.</li>
+<li>If you expect software to do something that is not part of its code, it does not know how to respond to it – often resulting in pointless behavior or a failure.</li>
+<li>Software is not creative. It does what it is told to do, and nothing else.</li>
+</ul>
+<p>These are limiting properties.</p>
+<p>However, as software was the most powerful and versatile tool of the recent past, we developed a kind of fixation: We considered software to be the only possible tool for almost any task. But now AI comes along and raises the question:</p>
+<blockquote>
+<p>Does it always have to be software?</p>
+</blockquote>
+<p>Computers cannot only run software. They can also run AI agents based on LLMs. Such agents are another tool. They are <em>not</em> software. An AI agent has different properties that deviate a lot from software. If we revisit the software properties from above, we get the following list for AI agents:</p>
+<ul>
+<li>AI agents are also very malleable. They can do everything we are able to describe with natural language in a way they understand it. As they also run on top of a Von Neumann machine, this is also <em>a lot</em>.</li>
+<li>AI agents are non-deterministic. There is a likelihood, they do something we do not want them to do. Provided with the same input and starting state, they may produce different results if run multiple times.</li>
+<li>We have not figured out how to predict reliably what an AI agent does. We know from experience that it often does what we want it to do, but with a certain likelihood, it does something else.</li>
+<li>We cannot prove the correctness of an AI agent (at least not at the moment).</li>
+<li>AI agents are great at dealing with ambiguity as we experience it in human communication. Given some context, they can often even make sense of quite ambiguous wording.</li>
+<li>An AI agent is able to respond to almost everything you tell it, even if it does not have clear instructions on how to handle the request. Depending on its training and the request, the response may not make a lot of sense. Nevertheless, quite often, it responds surprisingly well.</li>
+<li>AI agents are not creative, either. They basically recombine existing information based on probabilities. But by doing that, they often can adapt to unexpected situations better than software. However, it is not creative in the original meaning of the word. Up to now, this kind of creativity is still the domain of humans.</li>
+</ul>
+<p>As we can see, the properties of AI agents and software are quite different. Software excels at repeating tasks in a predictable and reliable way. It is not good at responding to ambiguity or something that is not explicitly part of its programming. AI agents are basically the opposite. Both can be used for a wide range of tasks, and neither is creative in the original meaning of the word. Still, AI agents appear a lot more creative than software due to their ability to respond to almost every input.</p>
+<p>All this means we have two different tools available now, we can use to execute tasks using a computer. The one tool is software; the other tool is AI (or more accurately: AI agents based on LLMs). This gives us new options we did not have before. We can choose between the two tools to get a given job done. And depending on the task at hand, software or an AI agent may be the better choice:</p>
+<ul>
+<li>If we can describe the task very precisely, and it is important that the task is always executed exactly in the same way, software is the tool of our choice.</li>
+<li>If the task contains some ambiguity and some variance in the results (including wrong results) is okay, AI is the tool of your choice.</li>
+</ul>
+<p>It is not a general “better” or “worse”. It depends on the task.</p>
+<p>If we want to transfer money from account A to account B, we want repeatable and reliable execution. The task should always be executed in exactly the same way. Hence, software it is (at least, I do not want an AI agent handling by money transfers).</p>
+<p>If we want to support people during their shopping with a virtual fashion assistant, we want a useful response in most situations, even if we did not anticipate the question or the question was asked in an ambiguous way. It is also okay if the answer is wrong sometimes, if it does not happen too often. In this case, AI is it.</p>
+<p>Our long-term practice that everything running on a computer was software led to the widespread misconception that AI is software, too. We often only asked if AI was able to implement the same properties as software and condemned AI because it was not. In this reasoning, we completely missed that AI is <em>not</em> software. AI is a tool on its own, and it extends the option space we have for solving problems.</p>
+<p>Whenever we have a problem now, we want to solve using a computer, we need to ask ourselves:</p>
+<blockquote>
+<p>Which tool is the best one for the task? Software or AI? <sup id="fnref:5"><a href="#fn:5" class="footnote-ref" role="doc-noteref">5</a></sup></p>
+</blockquote>
+<p>Personally, I think this tool distinction will have far-reaching consequences once it is better understood. E.g., software engineers and AI engineers will probably become distinct professions, as the skills they need and the tooling they will use to create their solutions will be very different. We will probably think about requirements differently, too, as it does not make too much sense to describe requirements for AI the same way we currently (should) describe requirements for software. And so on.</p>
+<h2 id="summing-up">Summing up</h2>
+<p>AI broke into software development a bit ago, as part of software development itself but also as part of the solutions built. By doing that, AI reignited an old discussion and sparked a new one. The two questions underlying these discussions are:</p>
+<ol>
+<li><em>Are there better ways to tell a Von Neumann machine what we want from it than writing code using a 3GL?</em> We are basically stuck with 3GL as the highest predominant abstraction we have if we try to make a computer understand our ideas. From a builder’s perspective, this relatively low level of abstraction is unsatisfying. It makes it very cumbersome to implement our ideas on a computer because it takes a lot of effort and precision to translate ideas into a 3GL. Hence, is 3GL code really the best we can come up with when it comes to turning our ideas into software, or are there better ways?</li>
+<li><em>Does it always need to be software?</em> AI, meaning AI agents powered by LLMs, is a new type of tool we can use to get a job done. In the past, the only tool we had to execute a task on a computer was software. Thus, whenever it came to computers, we only thought about software. Now we also have AI, which offers quite different properties that may fit certain types of jobs much better than software. We must not try to squeeze the implementation of every idea we want to run on a computer into our well-known software development framework. Instead, we rather need to learn how to decide when to use which tool, how to develop AI solutions best, and how the process and tooling for AI development needs to look like.</li>
+</ol>
+<p>I do not have the perfect answer to those questions. I even have my doubts that AI will be the tool that brings a higher abstraction level into software development. As long as we still need “humans in the loop”, it is not. It could only be if nobody needs to look into what AI does with the specifications we write at the higher abstraction level. At the moment, we are not yet there.</p>
+<p>Nevertheless, I think both questions are very interesting and need some serious thought and discussion. Maybe then we will find good answers for both of them together …</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>In IT, we tend to become nervous if we do something we already did a few years ago. The underlying assumption is that our domain is so innovative that still doing something we did a few years ago is a sign of failure to innovate. There are two essential flaws in this widespread way of thinking. First, innovation just for the sake of innovation does not serve any useful purpose. If something proved to be a very effective and efficient way of doing something, it does not necessarily need to be replaced by something new just because it exists for a while already. Second, we are by far not as innovative as we think we are. Very often, we innovate sideshows while we fail to address the issues that would really improve our domain. Additionally, many alleged innovations are often just old wine in new skins, i.e., a repackaging of old practices. Therefore, to be clear: it is not necessarily a problem if we have been doing something for 70 years already. However, if we do something for that long without any major advancement, it is at least worth a closer look.&nbsp;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">↩︎</a></p>
+</li>
+<li id="fn:2">
+<p>I know that there are many good reasons why reasonable software development takes its time and effort. I have written about it myself often enough. However, taking a different perspective can help to see different things – things that we miss if we only stick to our own perspective.&nbsp;<a href="#fnref:2" class="footnote-backref" role="doc-backlink">↩︎</a></p>
+</li>
+<li id="fn:3">
+<p>A closed abstraction is an abstraction where a human does not need to look “under the hood” of the abstraction but instead can work completely at the level of the abstraction. Non-closed abstractions were a big problem of 4GL, MDA, and alike. Often, developers had to look into the code generated by the 4GL/MDA/… tool and modify or augment it, which was very painful for the developers. Also, with agentic AI, we still need “humans in the loop” to make sure the generated code actually does what it is intended to do. I.e., also agentic AI does not provide a closed abstraction yet.&nbsp;<a href="#fnref:3" class="footnote-backref" role="doc-backlink">↩︎</a></p>
+</li>
+<li id="fn:4">
+<p>A big shoutout to <a href="https://www.amazingcto.com">Stephan Schmidt</a> for his in hindsight obvious but still amazing distinction between tools and jobs that make discussions about AI application and suitability a lot more expedient. He also came up with the example of adding numbers using different tools.&nbsp;<a href="#fnref:4" class="footnote-backref" role="doc-backlink">↩︎</a></p>
+</li>
+<li id="fn:5">
+<p>Note that using AI agents to create software is a different topic. This question is about using AI as part of the solution.&nbsp;<a href="#fnref:5" class="footnote-backref" role="doc-backlink">↩︎</a></p>
+</li>
+</ol>
+</div>
+
+  </div>
+
+  <footer>
+    <ul class="stats">
+  <li class="categories">
+    <ul>
+
+
+
+                <i class="fa fa-folder"></i>
+
+
+                <li><a class="article-category-link" href="https://ufried.com/categories/rethinking-it">Rethinking-IT</a></li>
+
+
+                <li><a class="article-category-link" href="https://ufried.com/categories/architecture">Architecture</a></li>
+
+
+
+    </ul>
+  </li>
+  <li class="tags">
+    <ul>
+
+
+
+                <i class="fa fa-tags"></i>
+
+
+                <li><a class="article-category-link" href="https://ufried.com/tags/problem-solving">problem solving</a></li>
+
+
+                <li><a class="article-category-link" href="https://ufried.com/tags/artificial-intelligence">artificial intelligence</a></li>
+
+
+                <li><a class="article-category-link" href="https://ufried.com/tags/software-development">software development</a></li>
+
+
+                <li><a class="article-category-link" href="https://ufried.com/tags/organization">organization</a></li>
+
+
+
+    </ul>
+  </li>
+</ul>
+
+  </footer>
+
+
 							</article>
 
 					</div>
